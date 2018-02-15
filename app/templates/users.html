@@ -1,0 +1,10 @@
+{% extends 'structure.html' %}
+{% block inner_content %}
+<h4>Current Users</h4>
+<table class="table table-responsive table-bordered">
+    <tr><th>Name</th><th>Password</th><th>Email</th></tr>
+    {% for user in users %}
+    <tr><td>{{ user.username | capitalize }}</td><td>{{ user.password_hash }}</td><td>{{ user.email }}</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}

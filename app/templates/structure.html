@@ -1,0 +1,14 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}{% endblock %}
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
+{% block content %}
+    <div class="container">
+        {% block inner_content %}{% endblock %}
+    </div>
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}
+{% endblock %}
